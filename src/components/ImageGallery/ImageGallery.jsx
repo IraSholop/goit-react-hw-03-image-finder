@@ -1,6 +1,7 @@
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
 import { Modal } from 'components/Modal/Modal';
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import css from './ImageGallery.module.css';
 
 export class ImageGallery extends Component {
@@ -36,4 +37,8 @@ export class ImageGallery extends Component {
       </>
     );
   }
+}
+
+ImageGallery.protoType = {
+  data: PropTypes.arrayOf(PropTypes.object)
 }

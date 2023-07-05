@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import css from './Modal.module.css';
 
 export class Modal extends Component {
@@ -31,4 +32,9 @@ export class Modal extends Component {
       </div>
     );
   }
+}
+
+Modal.protoType = {
+  url: PropTypes.string,
+  onClose: PropTypes.func
 }

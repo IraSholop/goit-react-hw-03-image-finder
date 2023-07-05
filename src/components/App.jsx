@@ -18,6 +18,9 @@ export class App extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { value, page, image } = this.state;
+    if (prevState.value !== value) {
+      this.setState({ page: 1, image: [] });
+    }
     if (value !== prevState.value || page !== prevState.page) {
       this.setState({ loader: true });
 
